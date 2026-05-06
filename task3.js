@@ -1,6 +1,5 @@
 const t3 = createSection("Task 3: Scope and this");
 
-// default parameter
 function greetUser(name = "Guest"){
     print(t3, "Hello " + name);
 }
@@ -9,7 +8,6 @@ greetUser();
 greetUser("Diana");
 
 
-// this (regular function)
 const user1 = {
     name: "Diana",
     sayHi: function(){
@@ -20,7 +18,6 @@ const user1 = {
 user1.sayHi();
 
 
-// this (arrow function)
 const user2 = {
     name: "Diana",
     sayHi: () => {
@@ -31,7 +28,7 @@ const user2 = {
 user2.sayHi();
 
 
-// var vs let
+
 for(var i = 0; i < 3; i++){}
 
 print(t3, "var i = " + i);

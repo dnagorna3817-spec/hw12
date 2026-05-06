@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HW12 Closures</title>
+
+<style>
+body{
+font-family: Arial;
+padding:30px;
+background:#f5f5f5;
+}
+
+.section{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+margin-bottom:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Homework 12</h1>
+
+<div id="output"></div>
+
+<script>
+// helper functions
+function createSection(title){
+    const div = document.getElementById("output");
+
+    const block = document.createElement("div");
+    block.classList.add("section");
+
+    const h = document.createElement("h2");
+    h.textContent = title;
+
+    block.appendChild(h);
+    div.appendChild(block);
+
+    return block;
+}
+
+function print(block, text){
+    console.log(text); // важливо
+    const p = document.createElement("p");
+    p.textContent = text;
+    block.appendChild(p);
+}
+</script>
+
+<script src="task1.js"></script>
+<script src="task2.js"></script>
+<script src="task3.js"></script>
+
+</body>
+</html>
